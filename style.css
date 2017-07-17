@@ -6,7 +6,9 @@ body {
 .container {
   border: 1px dashed;
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
+  max-width: 1010px;
 }
 
 .left-side {
@@ -18,10 +20,12 @@ body {
 .box {
   height: 200px;
   width: 200px;
+  flex-grow: 1;
 }
 
 .title-box1 {
   background-color: #B29578;
+  flex-grow: 1;
   height: 200px;
   width: 400px;
 }
@@ -54,9 +58,63 @@ body {
   background-color: #74DFFF;
 }
 
-.picture-box9 {
-  background-image:;
+.right-side {
+  background-image: url(http://68.media.tumblr.com/ae8d504094ea03e10849709f968bac29/tumblr_nj3mbezi6H1tbzpzgo1_400.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px blue dashed;
+  display: flex;
+  flex-grow: 1;
+  height: 600px;
+  width: 400px;
 }
+
+.top-right-buttons {
+  display: flex;
+  height: 30%;
+  justify-content: space-around;
+  margin: 10px 10px auto auto;
+}
+
+.left-button,
+.middle-button,
+.right-button {
+  border: none;
+  border-radius: 100%;
+  height: 15px;
+  margin: 2px;
+  width: 15px;
+}
+
+
+.left-button {
+  background-color: red;
+}
+
+.middle-button {
+  background-color: black;
+}
+
+.right-button {
+  background-color: black;
+}
+
+
+.left-arrow,
+.right-arrow {
+  border: none;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  margin: 40px;
+}
+
+.left-arrow {
+
+}
+
+.left-arrow {
+
+}
+/*.picture-box9 {
+}*/
