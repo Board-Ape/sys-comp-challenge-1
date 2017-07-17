@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 90%;
-  width: 90%;
+  display: flex;
+  min-height: 100vh;
 }
 
 .container {
@@ -8,7 +12,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  max-width: 1010px;
 }
 
 .left-side {
@@ -17,63 +20,157 @@ body {
   width: 60%;
 }
 
-.box {
-  height: 200px;
-  width: 200px;
-  flex-grow: 1;
-}
-
 .title-box1 {
   background-color: #B29578;
-  flex-grow: 1;
-  height: 200px;
-  width: 400px;
+  height: 33.33333%;
+  width: 66.66666%;
+}
+
+h1 {
+  color: white;
+  font-size: 2.0em;
+  margin: auto;
+  padding: 30px 0 0 20px;
+}
+
+.title-paragraph {
+  color: white;
+  font-size: 1.0em;
+  margin: auto;
+  padding: 10px 20px 0 20px;
+}
+
+.title-button-left,
+.title-button-right {
+  background-color: #B29578;
+  border: 2px white solid;
+  color: white;
+  height: 3.5em;
+  margin: 10px 10px 10px 20px;
+  width: 10.0em;
+}
+
+.title-button-left:hover,
+.title-button-right:hover {
+  background-color: black;
+}
+
+.box {
+  height: 33.33333%;
+  width: 33.33333%;
+}
+
+.box:hover {
+  background-color: white;
 }
 
 .box2 {
   background-color: #FFA954;
+  background-image: url(Images/001-internet-1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box2 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .box3 {
   background-color: #FF7F00;
+  background-image: url(Images/002-location.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box3 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .box4 {
   background-color: #008AB2;
+  background-image: url(Images/004-interface-1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box4 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .box5 {
   background-color: #B29578;
+  background-image: url(Images/005-multimedia-1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box5 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .box6 {
   background-color: #74DFFF;
+  background-image: url(Images/008-shapes-1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box6 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .box7 {
   background-color: #FF7F00;
+  background-image: url(Images/011-internet.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box7 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .box8 {
   background-color: #74DFFF;
+  background-image: url(Images/010-time.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.box8 p {
+  text-align: center;
+  margin-top: 130px;
 }
 
 .right-side {
-  background-image: url(http://68.media.tumblr.com/ae8d504094ea03e10849709f968bac29/tumblr_nj3mbezi6H1tbzpzgo1_400.jpg);
+  background-image: url(Images/Eminem.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px blue dashed;
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   height: 600px;
-  width: 400px;
+  width: 40%;
 }
 
 .top-right-buttons {
   display: flex;
-  height: 30%;
-  justify-content: space-around;
-  margin: 10px 10px auto auto;
+  height: 100px;
+  justify-content: flex-end;
+  margin: 10px 10px 0 10px;
 }
 
 .left-button,
@@ -99,22 +196,76 @@ body {
   background-color: black;
 }
 
+.arrows {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  width: 100%;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: red;
+}
 
 .left-arrow,
 .right-arrow {
+  background-color: white;
   border: none;
   border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  margin: 40px;
 }
 
-.left-arrow {
-
+#left-arrow,
+#right-arrow {
+  width: 50px;
 }
 
-.left-arrow {
+@media (max-width: 1050px){
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .left-side {
+    margin: auto;
+    order: 3;
+  }
+
+  .title-box1 {
+    width: 800px;
+  }
+
+  .right-side {
+    width: 500px;
+    margin: auto;
+    order: 2;
+  }
+
+  .box8 {
+    width: 800px;
+  }
 }
-/*.picture-box9 {
-}*/
+
+@media (max-width: 750px){
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-side {
+    margin: auto;
+    order: 2;
+    width: 400px;
+  }
+  .right-side {
+    margin: auto;
+    order: 1;
+    width: 400px;
+  }
+
+  .box {
+    margin: auto;
+    width: 400px;
+  }
+}
